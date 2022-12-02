@@ -18,7 +18,7 @@
 		"args": [
 			"--class",
 			"App",
-			"hello-world.jar"
+			"${workspaceFolderBasename}.jar"
 		]
 	  }
 	]
