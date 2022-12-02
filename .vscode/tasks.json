@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"type": "java (buildArtifact)",
+		"label": "Generate application jar (no dependency)",
+		"mainClass": "App",
+		"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+		"elements": [
+		  "${compileOutput}"
+		],
+		"problemMatcher": []
+	  },
+	  {
+		"type": "shell",
+		"label": "Submit to Spark",
+		"command": "/usr/local/spark/bin/spark-submit",
+		"args": [
+			"--class",
+			"App",
+			"hello-world.jar"
+		]
+	  }
+	]
+  }
